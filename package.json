@@ -1,0 +1,15 @@
+{
+  "name": "Cuddle Bot",
+  "version": "0.0.1",
+  "description": "Cuddle Bot, for when you need a virtual Baymax hug",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
