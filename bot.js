@@ -30,4 +30,28 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'I need a hug') {
+    msg.reply('*pulls you close and hugs you*');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Hug me') {
+    msg.reply('*hugs you*');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Cuddles') {
+    msg.reply('*gives you a cuddle*');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'I need a cuddle') {
+    msg.reply('*cuddles you*');
+  }
+});
+
 client.login(auth.token);
