@@ -7,8 +7,26 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+  if (msg.content === 'i need a cuddle') {
+    msg.reply('*cuddles you*');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'cuddles') {
+    msg.reply('*gives you a cuddle*');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === 'hug me') {
     msg.reply('*hugs you*');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'i need a hug') {
+    msg.reply('*pulls you close and hugs you*');
   }
 });
 
