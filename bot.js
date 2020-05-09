@@ -54,4 +54,21 @@ client.on('message', msg => {
   }
 });
 
+const prefix = ">~<";
+client.on("message", (message) => {
+  // Exit and stop if it's not there
+  if (!message.content.startsWith(prefix)) return;
+ 
+  if (message.content.startsWith(prefix + "ping")) {
+    message.channel.send("pong!");
+  } else
+  if (message.content.startsWith(prefix + "help")) {
+    message.channel.send("```Current commands are the following:-
+                         "Hug me"
+                         "I need a hug"
+                         "Cuddles"
+                         "I need a cuddle"```");
+  }
+});
+
 client.login(auth.token);
