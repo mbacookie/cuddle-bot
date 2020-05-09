@@ -54,7 +54,7 @@ client.on('message', msg => {
   }
 });
 
-const prefix = ">~<";
+bot = commands.Bot(command_prefix=commands.when_mentioned_or('!'))
 client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
