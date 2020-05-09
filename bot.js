@@ -63,7 +63,7 @@ client.on("message", (message) => {
     message.channel.send("pong!");
   } else
   if (message.content.startsWith(prefix + "help")) {
-    message.channel.send("```Current commands are the following:-
+    message.channel.send("```Current commands are the following
                          "Hug me"
                          "I need a hug"
                          "Cuddles"
