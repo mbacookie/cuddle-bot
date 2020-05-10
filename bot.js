@@ -66,6 +66,30 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'Pine') {
+    msg.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'pine') {
+    msg.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Pine!') {
+    msg.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'pine!') {
+    msg.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
+  }
+});
+
 const prefix = ">~< ";
 client.on("message", (message) => {
   // Exit and stop if it's not there
