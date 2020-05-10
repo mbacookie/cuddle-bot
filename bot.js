@@ -54,7 +54,19 @@ client.on('message', msg => {
   }
 });
 
-bot = commands.Bot(command_prefix=commands.when_mentioned_or('!'))
+client.on('message', msg => {
+  if (msg.content === 'Cookie') {
+    msg.reply('*gives you a cookie* :cookie:');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'cookie') {
+    msg.reply('*gives you a cookie* :cookie:');
+  }
+});
+
+const prefix = ">~<";
 client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
@@ -63,7 +75,7 @@ client.on("message", (message) => {
     message.channel.send("pong!");
   } else
   if (message.content.startsWith(prefix + "help")) {
-    message.channel.send("Current commands are the following. Hug me, I need a hug, Cuddles, I need a cuddle");
+    message.channel.send("Current commands are the following. Hug me, I need a hug, Cuddles, I need a cuddle, Cookie");
   }
 });
 
