@@ -1,6 +1,6 @@
 {
   "name": "Cuddle-Bot",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Cuddle Bot, for when you need a virtual Baymax hug",
   "main": "bot.js",
   "keywords": [],
