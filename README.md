@@ -1,10 +1,16 @@
 # cuddle-bot
-uh, for now just a cuddle bot
-Current commands stand at the following with NO prefix
-{
-  "Cuddles"
-  "I need a cuddle"
-  "Hug me"
-  "I need a hug"
-                     }
-Beginning capitalisation is not necessary
+Cuddle bot, for when you have that ultimate need for a hug but when no one else is about!  <br />
+Current commands stand at the following without a prefix: <br />
+"Cookie" <br />
+"Pine" <br />
+Current commands stand at the following with prefix <br />
+"Cuddles" <br /> 
+"I need a cuddle" <br /> 
+"Hug me" <br />
+"I need a hug" <br />
+Beginning capitalisation is not necessary <br />
+<br />
+Additional commands coming in future update <br />
+<br />
+Feel free to join Cuddlebots development server "Hentai With Senpai" <br />
+Https://discord.com/invite/QB5PGBE
