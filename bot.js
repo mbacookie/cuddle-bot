@@ -90,7 +90,7 @@ client.on('message', msg => {
   }
 });
 
-const prefix = ">~< ";
+const prefix = "\ ";
 client.on("message", (message) => {
   // Exit and stop if it's not there
   if (!message.content.startsWith(prefix)) return;
@@ -100,6 +100,30 @@ client.on("message", (message) => {
   } else
   if (message.content.startsWith(prefix + "help")) {
     message.channel.send("Current commands are the following- \n 	Hug me \n 	I need a hug \n 	Cuddles \n 	I need a cuddle \n 	Cookie \n \n commands do not need '>~<' placed in front to work");
+  } else
+  if (message.content.startsWith(prefix + "I need a cuddle")) {
+	  message.reply("*Cuddles you*");
+  } else
+  if (message.content.startsWith(prefix + "i need a cuddle")) {
+	  message.reply("*Cuddles you*");
+  } else
+  if (message.content.startsWith(prefix + "Cuddles")) {
+	  message.reply("*Gives you a cuddle*");
+  } else
+  if (message.content.startsWith(prefix + "cuddles")) {
+	  message.reply("*Gives you a cuddle*");
+  } else
+  if (message.content.startsWith(prefix + "Hug me")) {
+	  message.reply("*Hugs you*");
+  } else
+  if (message.content.startsWith(prefix + "hug me")) {
+	  message.reply("*Hugs you*");
+  } else
+  if (message.content.startsWith(prefix + "I need a hug")) {
+	  message.reply("*Pulls you close and hugs you*");
+  } else
+  if (message.content.startsWith(prefix + "i need a hug")) {
+	  message.reply("*Pulls you close and hugs you*");
   }
 });
 
