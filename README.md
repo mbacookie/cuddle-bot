@@ -10,4 +10,7 @@ Current commands stand at the following with prefix <br />
 "I need a hug" <br />
 Beginning capitalisation is not necessary <br />
 <br />
-Additional commands coming in future update 
+Additional commands coming in future update <br />
+<br />
+Feel free to join Cuddlebots development server "Hentai With Senpai" <br />
+Https://discord.com/invite/QB5PGBE
