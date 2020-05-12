@@ -1,6 +1,9 @@
 # cuddle-bot
-uh, for now just a cuddle bot  <br />
-Current commands stand at the following with NO prefix: <br />
+Cuddle bot, for when you have that ultimate need for a hug but when no one else is about!  <br />
+Current commands stand at the following without a prefix: <br />
+"Cookie" <br />
+"Pine" <br />
+Current commands stand at the following with prefix <br />
 "Cuddles" <br /> 
 "I need a cuddle" <br /> 
 "Hug me" <br />
