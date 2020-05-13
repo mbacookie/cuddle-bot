@@ -4,6 +4,12 @@ const auth = require('./auth.json');
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setStatus('Active')
+    client.user.setPresence({
+        game: {
+		name: '[¬] cuddling all the cuties!',
+        }
+    });
 });
 
 client.on('message', message => {
