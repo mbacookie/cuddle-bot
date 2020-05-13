@@ -6,46 +6,52 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', msg => {
-  if (msg.content === 'Cookie') {
-    msg.reply('*gives you a cookie* :cookie:');
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (message.content === 'Cookie') {
+    message.reply('*gives you a cookie* :cookie:');
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'cookie') {
-    msg.reply('*gives you a cookie* :cookie:');
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (message.content === 'cookie') {
+    message.reply('*gives you a cookie* :cookie:');
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'Pine') {
-    msg.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (message.content === 'Pine') {
+    message.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'pine') {
-    msg.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (message.content === 'pine') {
+    message.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'Pine!') {
-    msg.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (message.content === 'Pine!') {
+    message.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'pine!') {
-    msg.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (message.content === 'pine!') {
+    message.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
   }
 });
 
 const prefix = "¬ ";
 client.on("message", (message) => {
   // Exit and stop if it's not there
-  if (!message.content.startsWith(prefix)) return;
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
  
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
