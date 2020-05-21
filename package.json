@@ -8,7 +8,9 @@
     "npm": "*"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "npm install",
+    "start": "node cuddlebot.js",
+  	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "AkashicBearere & mbacookie",
   "license": "GNUv3",
