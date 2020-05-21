@@ -1,12 +1,23 @@
 {
-  "name": "Cuddle-Bot",
-  "version": "0.1.0",
-  "description": "Cuddle Bot, for when you need a virtual Baymax hug",
-  "main": "bot.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "cuddlebot",
+  "version": "0.2.0",
+  "description": "Test",
+  "main": "cuddlebot.js",
+  "engines": {
+    "node": "12.16.2",
+    "npm": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AkashicBearere & mbacookie",
+  "license": "GNUv3",
   "dependencies": {
-    "discord.js": "^11.5.1"
+    "discord.js": "^12.0.1",
+    "discord.js-commando": "github:discordjs/Commando",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "nekos.life": "^2.0.5",
+    "node-fetch": "^2.6.0"
   }
 }
