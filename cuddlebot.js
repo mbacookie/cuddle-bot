@@ -1,94 +1,57 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const auth = require('./auth.json');
+const { CommandoClient } = require("discord.js-commando");
+const { MessageEmbed } = require('discord.js');
+const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config();
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setStatus('Active')
-    client.user.setPresence({
-        game: {
-		name: '[¬] cuddling all the cuties!',
-        }
-    });
+const client = new CommandoClient({
+  commandPrefix: '-',
+  owner: ['193021560792154112', '135751892402700288'],
+  invite: "https://discord.gg/QB5PGBE",
+  disableEveryone: true
 });
+
+client.registry
+    .registerDefaultTypes()
+    .registerGroups([
+        ['emo', 'Emotions'], ['utilisation', 'Util']
+    ])	
+     .registerDefaultGroups()
+     .registerDefaultCommands({help: false, ping: false, prefix: true, eval: true, unknownCommand: false})
+     .registerCommandsIn(path.join(__dirname, 'commands'));
+
+client.once('ready', () => {
+
+    console.log(`\nLogged in as ${client.user.tag} (${client.user.id}\n\nReady to Serve everyone with love <3)`);
+    
+    var status = ["-help for help", "Testing Stuff"]
+
+    setInterval(function() {
+
+        let randstat = status[Math.floor(Math.random()*status.length)]
+
+        client.user.setPresence({activity: { name: `${randstat}` }, status: "online"})
+
+    }, 20000);
+    
+ });
 
 client.on('message', message => {
   if (message.author.bot) return;
-  if (message.content === 'Cookie') {
+
+  //Randomness
+
+  if (message.content === 'Cookie' || message.content === 'cookie'.toUpperCase()) {
+
     message.reply('*gives you a cookie* :cookie:');
-  }
-});
 
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content === 'cookie') {
-    message.reply('*gives you a cookie* :cookie:');
   }
-});
 
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content === 'Pine') {
+  if (message.content === 'Pine' || message.content === 'pine'.toUpperCase() || message.content === 'Pine!' || message.content === 'pine!'.toUpperCase()) {
+    
     message.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
-  }
-});
 
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content === 'pine') {
-    message.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
   }
-});
+})
 
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content === 'Pine!') {
-    message.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
-  }
-});
-
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content === 'pine!') {
-    message.channel.send('Please change the topic, <@&708954942530125864> have been made aware and are watching');
-  }
-});
-
-const prefix = "¬ ";
-client.on("message", (message) => {
-  // Exit and stop if it's not there
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
- 
-  if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong!");
-  } else
-  if (message.content.startsWith(prefix + "help")) {
-    message.channel.send("Current commands are the following- \n 	Hug me \n 	I need a hug \n 	Cuddles \n 	I need a cuddle \n 	Cookie");
-  } else
-  if (message.content.startsWith(prefix + "I need a cuddle")) {
-	  message.reply("*Cuddles you*");
-  } else
-  if (message.content.startsWith(prefix + "i need a cuddle")) {
-	  message.reply("*Cuddles you*");
-  } else
-  if (message.content.startsWith(prefix + "Cuddles")) {
-	  message.reply("*Gives you a cuddle*");
-  } else
-  if (message.content.startsWith(prefix + "cuddles")) {
-	  message.reply("*Gives you a cuddle*");
-  } else
-  if (message.content.startsWith(prefix + "Hug me")) {
-	  message.reply("*Hugs you*");
-  } else
-  if (message.content.startsWith(prefix + "hug me")) {
-	  message.reply("*Hugs you*");
-  } else
-  if (message.content.startsWith(prefix + "I need a hug")) {
-	  message.reply("*Pulls you close and hugs you*");
-  } else
-  if (message.content.startsWith(prefix + "i need a hug")) {
-	  message.reply("*Pulls you close and hugs you*");
-  }
-});
-
-client.login(auth.token);
+client.login(process.env.token);
