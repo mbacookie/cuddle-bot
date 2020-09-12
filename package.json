@@ -20,6 +20,6 @@
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "nekos.life": "^2.0.5",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
